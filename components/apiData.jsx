@@ -1,6 +1,6 @@
 //Url Home
 export async function fetchHome() {
-  const res = await fetch("https://komi.katowproject.app/api/komikindo/home");
+  const res = await fetch("https://zeronewatch-api.vercel.app/komiku/home");
   const data = await res.json();
   return data;
 }
@@ -8,7 +8,7 @@ export async function fetchHome() {
 //Url Daftar Komik
 export async function fetchDaftar(page = 1) {
   const res = await fetch(
-    "https://komi.katowproject.app/api/komikindo/daftar-komik/page/" + page
+    "https://zeronewatch-api.vercel.app/komiku/genres/page/" + page
   );
   const data = await res.json();
   return data;
@@ -17,7 +17,7 @@ export async function fetchDaftar(page = 1) {
 //Url Search
 export async function fetchSearch(query, page = 1) {
   const res = await fetch(
-    `https://komi.katowproject.app/api/komikindo/search/${query}/?page=${page}`
+    `https://zeronewatch-api.vercel.app/komiki/search/${query}/?page=${page}`
   );
   const data = await res.json();
   return data;
@@ -26,7 +26,7 @@ export async function fetchSearch(query, page = 1) {
 //Url Detail Komik
 export async function fetchDetail(endpoint) {
   const res = await fetch(
-    "https://komi.katowproject.app/api/komikindo/komik/" + endpoint
+    "https://zeronewatch-api.vercel.app/komiku/comic" + endpoint
   );
   const data = await res.json();
   return data;
@@ -35,7 +35,7 @@ export async function fetchDetail(endpoint) {
 //Url Chapter Detail Komik
 export async function fetchBaca(chapter) {
   const res = await fetch(
-    "https://komi.katowproject.app/api/komikindo/chapter/" + chapter
+    "https://zeronewatch-api.vercel.app/komiku/chapter/" + chapter
   );
   const data = await res.json();
   return data;
